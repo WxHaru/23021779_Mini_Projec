@@ -1,0 +1,46 @@
+#h1{color: #A22CDB;
+  font-family: "Copperplate", fantasy;
+  text-align: center;
+}
+
+#mainbackground{ background-color:pink;}
+
+#navbar{ border-style: solid;
+  border-color: pink;}
+
+#homebannerCaption1{ background-color:darkorchid;
+  color:pink;
+  font-family: "Georgia", serif;}
+#homebannerText1{ background-color:darkorchid;
+  color:pink}
+
+#collapsibleNavbar{ background-color:darkmagenta;
+  border-style: solid;
+  border-color: lightpink
+}
+#homebartext{ color: pink;
+    font-family: "Georgia", serif;}
+#mdatabasebartext{ color: pink;
+    font-family: "Georgia", serif;}
+#vdatabasebartext{ color: pink;
+    font-family: "Georgia", serif;}
+#idolbartext{ color: pink;
+    font-family: "Georgia", serif;}
+#dischographybartext{ color: pink;
+    font-family: "Georgia", serif;}
+#membershipbartext{ color: pink;
+    font-family: "Georgia", serif;}
+#votingbartext{ color: pink;
+    font-family: "Georgia", serif;}
+#contactbartext{ color: pink;
+    font-family: "Georgia", serif;}
+#signuploginbutton .nav-link {
+    color: lightpink;
+    font-family: "Copperplate", fantasy;
+    background-color:darkorchid
+}
+
+#twice{color:darkmagenta;
+    font-family: "Copperplate", fantasy;
+    font-size: xx-large;
+}

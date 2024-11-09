@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/idolInfos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Twice</title>
+</head>
+<body id = "mainbackground3">
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container mt-3" id = "container1">
+        <form action="/idolInfos/:id" method="POST" enctype="multipart/form-data">
+        <h2>Idol Information</h2>
+            <div class="mb-3 mt-3">
+               <label for="idolimage">Idol Image:</label>
+               <!-- TO DO: Insert code here to display idol name -->
+               <%= idoldetails.idolimage %>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="idolname">Idol Name:</label>
+                <!-- TO DO: Insert code here to display idol name -->
+                <%= idoldetails.idolname %>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="position">Position:</label>
+                <!-- TO DO: Insert code here to display idol position -->
+                <%= idoldetails.position %>
+            </div>
+            <a href="/about">Back</a>
+        </form>     
+    </div>
+</body>
+</html>

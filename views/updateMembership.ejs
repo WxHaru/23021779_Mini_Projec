@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Twice</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container mt-3">
+        <br>
+        <div class="text-center"><h2>Update Membership</h2></div>
+        <br>
+        <div class="text-center">
+          <% if (membership) { %> 
+            <form action="/updateMembership/<%= membership.memberId %>" method="POST" enctype="multipart/form-data">
+                <label for="membername">Member Name:</label><br>
+                <input type="text" id="membername" name="membername" value=<%= membership.membername %> required><br><br>
+                
+                <label for="memberimage">Current Image:</label><br>
+                <input type="text" name="currentImage" value= <%= membership.memberimage %> disabled><br>
+                <img src = "/images/<%= membership.memberimage %>" width="40%"><br><br>
+                
+                New Image:<br> <input type="file" id="memberimage" name="memberimage" accept="memberimage/*" value=<%= membership.memberimage %> ><br><br>
+                
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" min="0" step="1" value=<%= membership.location %> required><br><br>
+
+                <label for="favouriteidol">Favourite Idol:</label><br>
+                <input type="text" id="favouriteidol" name="favouriteidol" min="0" step="0.01" value= <%= membership.favouriteidol %> required><br><br>
+
+                <label for="favouritesong">Favourite Song:</label><br>
+                <input type="text" id="favouritesong" name="favouritesong" min="0" step="0.001" value= <%= membership.favouritesong %> required><br><br>
+
+                <button type="submit">Update Membership</button>
+            </form>
+          <% } else { %>
+              <p>No membership found.</p>
+          <% } %>
+          <a href ="/">Back</a>
+        </div>
+    </div>
+</body>
+</html>
